@@ -50,8 +50,8 @@ public class LinkedQueue implements Queue{
 	}
 
 	@Override
-	public int getFront() {
-		return head.data;
+	public boolean isFull() {
+		return false;
 	}
 
 	@Override

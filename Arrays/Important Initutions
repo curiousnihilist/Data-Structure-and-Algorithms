@@ -1,0 +1,6 @@
+1. If the order of the array does not matter, try sorting if it helps.
+
+2. If we need to keep some property of array elements in memory for further comparison/manipulation
+   try hashing or use set.
+
+3. 

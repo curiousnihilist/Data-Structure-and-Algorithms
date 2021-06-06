@@ -21,8 +21,8 @@ public class CircularQueue implements Queue{
 		queue = new int[capacity];
 		this.capacity = capacity;
 		size = 0;
-		rear = 0;
-		front = 0;
+		rear = -1;
+		front = -1;
 	}
 
 	@Override
@@ -30,10 +30,15 @@ public class CircularQueue implements Queue{
 		if(size == capacity) {
 			System.out.println("Queue is full!");
 			return;
+		}else {
+			if(front==-1) {
+				front++;
+			}
+			size++;
+			rear = (rear+1)%capacity;
+			queue[rear] = data;
 		}
-		size++;
-		queue[rear] = data;
-		rear = (rear+1)%capacity;
+		
 	}
 
 	@Override
@@ -43,14 +48,13 @@ public class CircularQueue implements Queue{
 		}
 		size--;
 		int temp = queue[front];
-		queue[front]= Integer.MIN_VALUE;
 		front = (front+1)%capacity;
 		return temp;
 	}
 
 	@Override
-	public int getFront() {
-		return queue[front];
+	public boolean isFull() {
+		return size == capacity;
 	}
 
 	@Override

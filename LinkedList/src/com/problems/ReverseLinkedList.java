@@ -1,47 +1,34 @@
 package com.problems;
 
 import com.linkedlist.*;
+import com.linkedlist.implementations.SingleyLinkedList;
 
 /**
- * Problem Statement
+ * Problem : Reverse a singly linkedlist
  * 
- * Reverse a singly linkedlist without recusrsion
- * 
- * Approach
+ * Approach:
+ * 1. take three variables prev=null, currNode=head, next = null;
  * 
  * @author akash
  *
  */
 public class ReverseLinkedList {
 	
+	
 	public static void main(String[] args) {
-		SinglyLinkedList list = new SinglyLinkedList(0);
+		SingleyLinkedList list = new SingleyLinkedList(1);
 		
-		for(int i=1; i<=9; i++) {
+		for(int i=2; i<=10; i++) {
 			list.insertAtEnd(i);
 		}
 		
 		list.print();
 		
-		list.reverse();
+		// recursion using iterative approach
+		list.reverse().print();
 		
-		list.print();
-		
-		System.out.println("==========");
-		list.reverseByRecursion();
-		
-		list.print();
-		
-		System.out.println(list.nthNodeFromEnd(2));
-		
-		System.out.println(list.middleElement());
-//		
-//		SinglyLinkedList.Node head = list.returnHead();
-//		SinglyLinkedList.Node currNode = head;
-//		
-//		while(currNode!=null) {
-			
-		
+		//recursion using 
+		list.reverseRecursive().print();
 		
 		
 	}

@@ -6,7 +6,7 @@ public class Testing {
 		//Queue myQueue = new ArrayQueue(10);
 		//Queue myQueue = new LinkedQueue();
 		Queue myQueue = new CircularQueue(10);
-		for(int i=1; i<=10; i++) {
+		for(int i=1; i<=5; i++) {
 			myQueue.enQueue(i);
 		}
 		

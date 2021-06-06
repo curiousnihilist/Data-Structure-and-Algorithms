@@ -1,7 +1,5 @@
 package com.problems;
 
-import com.linkedlist.LinkedList;
-import com.linkedlist.SinglyLinkedList;
 
 /**
  * Find the nth node from the end of the linkedlist
